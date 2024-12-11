@@ -12,12 +12,13 @@ spring:
             - path= /utilisateur/**
           filter:
             - RewritePath=/utilisateur/(?<path>.*), /$\{path}
-         - id:microservice-Utilisateur
+            
+         - id:microservice-Projet
           uri:lb://MSProjet
           predicates:
-            - path= /utilisateur/**
+            - path= /projet/**
           filter:
-            - RewritePath=/utilisateur/(?<path>.*), /$\{path}     
+            - RewritePath=/projet/(?<path>.*), /$\{path}     
       
     
   
